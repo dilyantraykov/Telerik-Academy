@@ -1,0 +1,6 @@
+D:\My Stuff\telerik\Exam1Preparation\MollyMolly\bin\Debug\MollyMolly.exe.config
+D:\My Stuff\telerik\Exam1Preparation\MollyMolly\obj\Debug\MollyMolly.csprojResolveAssemblyReference.cache
+D:\My Stuff\telerik\Exam1Preparation\MollyMolly\bin\Debug\MollyMolly.exe
+D:\My Stuff\telerik\Exam1Preparation\MollyMolly\bin\Debug\MollyMolly.pdb
+D:\My Stuff\telerik\Exam1Preparation\MollyMolly\obj\Debug\MollyMolly.exe
+D:\My Stuff\telerik\Exam1Preparation\MollyMolly\obj\Debug\MollyMolly.pdb
