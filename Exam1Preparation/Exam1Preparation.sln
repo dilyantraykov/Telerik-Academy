@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MollyMolly", "MollyMolly\MollyMolly.csproj", "{1E6574E1-4C46-4292-BB89-7A6E6FEC3B92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. MollyMolly", "MollyMolly\01. MollyMolly.csproj", "{1E6574E1-4C46-4292-BB89-7A6E6FEC3B92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightmareOnCodeStreet", "NightmareOnCodeStreet\NightmareOnCodeStreet.csproj", "{88EEFA1B-4FA1-4B95-BE31-0591E67DC57D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. NightmareOnCodeStreet", "NightmareOnCodeStreet\02. NightmareOnCodeStreet.csproj", "{88EEFA1B-4FA1-4B95-BE31-0591E67DC57D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Enigmanation", "Enigmanation\03. Enigmanation.csproj", "{6A3DDEFE-2A95-41D9-9F18-0C4585692614}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{88EEFA1B-4FA1-4B95-BE31-0591E67DC57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88EEFA1B-4FA1-4B95-BE31-0591E67DC57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88EEFA1B-4FA1-4B95-BE31-0591E67DC57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3DDEFE-2A95-41D9-9F18-0C4585692614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3DDEFE-2A95-41D9-9F18-0C4585692614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3DDEFE-2A95-41D9-9F18-0C4585692614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3DDEFE-2A95-41D9-9F18-0C4585692614}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
