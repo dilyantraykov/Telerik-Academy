@@ -12,8 +12,8 @@ class PointInCircle
         double x = double.Parse(Console.ReadLine());
         Console.WriteLine("Insert y: ");
         double y = double.Parse(Console.ReadLine());
-        Console.WriteLine((x*x+y*y <= 4) ? "true" : "false");
-        char sex = char.Parse(Console.ReadLine());
+        Console.WriteLine("Is point (" + x + "," + y + ") inside of the circle?");
+        Console.WriteLine((x*x+y*y <= 4) ? "Yes!" : "No!");
     }
 }
 

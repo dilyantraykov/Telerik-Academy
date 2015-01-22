@@ -41,9 +41,13 @@ class AdvancedBitExchange
 
     static void Main()
     {
+        Console.WriteLine("Insert n: ");
         uint n = uint.Parse(Console.ReadLine());
+        Console.WriteLine("Insert p: ");
         sbyte p = sbyte.Parse(Console.ReadLine());
+        Console.WriteLine("Insert q: ");
         sbyte q = sbyte.Parse(Console.ReadLine());
+        Console.WriteLine("Insert k: ");
         sbyte k = sbyte.Parse(Console.ReadLine());
         if (Math.Abs(p) + Math.Abs(k) > 32 || Math.Abs(q) + Math.Abs(k) > 32) // check if bits are out of range
         {

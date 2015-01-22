@@ -8,6 +8,7 @@ class BitExchange
 {
     static void Main()
     {
+        Console.WriteLine("Insert n: ");
         uint n = uint.Parse(Console.ReadLine());
         Console.WriteLine("n: " + n);
         Console.WriteLine("Binary n: " + Convert.ToString(n, 2).PadLeft(32, '0'));

@@ -8,8 +8,10 @@ class CheckPrimer
 {
     static void Main()
     {
+        Console.WriteLine("Insert n:");
         int n = int.Parse(Console.ReadLine());
-        Console.WriteLine(isPrime(n));
+        Console.WriteLine("Is n prime?");
+        Console.WriteLine(isPrime(n) ? "Yes!" : "No!");
     }
 
     static bool isPrime(int n)

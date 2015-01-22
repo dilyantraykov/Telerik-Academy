@@ -8,7 +8,9 @@ class ThirdDigit7
 {
     static void Main()
     {
+        Console.WriteLine("Insert n: ");
         int n = int.Parse(Console.ReadLine());
-        Console.WriteLine((n/100)%10 == 7 ? "true" : "false");
+        Console.WriteLine("Is the third digit from right to left 7?");
+        Console.WriteLine((n/100)%10 == 7 ? "Yes!" : "No!");
     }
 }

@@ -10,11 +10,12 @@ class ExtractBit
 {
     static void Main()
     {
+        Console.WriteLine("Insert n: ");
         uint n = uint.Parse(Console.ReadLine());
         uint mask = 1 << 3; // 00000000 00001000
         uint nAndMask = n & mask;
         uint bit = nAndMask >> 3;
-        Console.WriteLine(bit);
+        Console.WriteLine("Bit #3 is " + bit);
     }
 }
 

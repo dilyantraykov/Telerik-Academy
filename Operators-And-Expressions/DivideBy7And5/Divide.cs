@@ -8,8 +8,10 @@ class Divide
 {
     static void Main()
     {
+        Console.WriteLine("Insert n: ");
         int n = int.Parse(Console.ReadLine());
-        Console.WriteLine((n % 7 == 0) && (n % 5) == 0 && (n!=0) ? "true" : "false");
+        Console.WriteLine("Can n be devided by 5 and 7?");
+        Console.WriteLine((n % 7 == 0) && (n % 5) == 0 && (n!=0) ? "Yes!" : "No!");
     }
 }
 

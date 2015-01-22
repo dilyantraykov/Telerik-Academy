@@ -11,6 +11,6 @@ class MoonGravitation
     {
         Console.WriteLine("Insert weight: ");
         double weight = double.Parse(Console.ReadLine());
-        Console.WriteLine(weight * 17/100);
+        Console.WriteLine("On the moon you would weigh: " + (weight * 17/100));
     }
 }
