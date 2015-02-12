@@ -181,7 +181,5 @@ class Program
                 }
             }
         }
-        Console.ReadLine();
     }
 }
-
