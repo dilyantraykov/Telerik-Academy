@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. TRES4Numbers", "TRES4Numbers\01. TRES4Numbers.csproj", "{554A39CB-36B1-417D-9795-A9B2D6E132EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BunnyFactory", "BunnyFactory\02. BunnyFactory.csproj", "{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{554A39CB-36B1-417D-9795-A9B2D6E132EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554A39CB-36B1-417D-9795-A9B2D6E132EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554A39CB-36B1-417D-9795-A9B2D6E132EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554A39CB-36B1-417D-9795-A9B2D6E132EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
