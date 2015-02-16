@@ -7,10 +7,12 @@
 // Ensure a constant game speed by Thread.Sleep(150).
 // Implement collision detection and scoring system.
 
+// needed libraries
 using System;
 using System.Collections.Generic;
 using System.Threading;
 
+// all of the objects have these properties
 struct Object
 {
     public int x;
@@ -20,6 +22,7 @@ struct Object
     public ConsoleColor color;
 }
 
+// main logic
 class Rocks
 {
     // some constants
@@ -48,8 +51,11 @@ class Rocks
         Console.ForegroundColor = color;
         Console.WriteLine(str);
     }
+
+    // the program itself
     static void Main()
     {
+        // the welcome screen
         Console.Title = "Falling Rocks by Dilyan Traykov";
         Console.BufferHeight = Console.WindowHeight = HEIGHT;
         Console.BufferWidth = Console.WindowWidth = WIDTH;
@@ -99,7 +105,7 @@ class Rocks
             brandNewRock.c = symbols[randomGenerator.Next(1, 12)];
             rocks.Add(brandNewRock);
 
-            // constantly check for a keypress
+            // constantly check for a keypress and manage key actions
             while (Console.KeyAvailable)
             {
                 ConsoleKeyInfo pressedKey = Console.ReadKey(true);
@@ -159,8 +165,10 @@ class Rocks
                 }
             }
             rocks = newList;
+
             // refresh the screen
             Console.Clear();
+
             // restart game if hit
             if (hit)
             {
@@ -173,16 +181,19 @@ class Rocks
                 score += speed / 100;
                 speed += 0.2;
             }
+
             // print all the rocks
             foreach (Object obj in rocks)
             {
                 PrintOnPosition(obj.x, obj.y, obj.c, obj.length, obj.color);
             }
+
             // the info screen
             PrintStringOnPosition(WIDTH - 22, 1, "Lives: " + livesCount, ConsoleColor.White);
             PrintStringOnPosition(WIDTH - 22, 3, "Score: " + Math.Round(score, 0), ConsoleColor.White);
             PrintStringOnPosition(WIDTH - 22, 5, "Speed: " + Math.Round(speed, 0), ConsoleColor.White);
             PrintStringOnPosition(WIDTH - 22, HEIGHT - 2, "Press [enter] to exit", ConsoleColor.Gray);
+
             // control game speed
             Thread.Sleep(350 - (int)speed);
         }
