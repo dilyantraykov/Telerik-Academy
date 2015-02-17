@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. TRES4Numbers", "TRES4Nu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. BunnyFactory", "BunnyFactory\02. BunnyFactory.csproj", "{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Patterns", "Patterns\03. Patterns.csproj", "{A63C291E-5F53-4840-B507-5099B53FF7BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. VariableLengthCodes", "VariableLengthCodes\04. VariableLengthCodes.csproj", "{C89053C4-9265-45ED-9D40-C95C6F22A1CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62331F36-AC3B-4D7A-94BD-FC7CF71C003D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63C291E-5F53-4840-B507-5099B53FF7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63C291E-5F53-4840-B507-5099B53FF7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63C291E-5F53-4840-B507-5099B53FF7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63C291E-5F53-4840-B507-5099B53FF7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C89053C4-9265-45ED-9D40-C95C6F22A1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C89053C4-9265-45ED-9D40-C95C6F22A1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C89053C4-9265-45ED-9D40-C95C6F22A1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C89053C4-9265-45ED-9D40-C95C6F22A1CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
