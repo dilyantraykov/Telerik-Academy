@@ -1,0 +1,36 @@
+What is a string?
+ - A string is basically a sequence of characters. Each character is a Unicode character in the range U+0000 to U+FFFF (more on that later).
+
+The string type (I'll use the C# shorthand rather than putting System.String each time) has the following characteristics:
+- It is a reference type
+- It's a common misconception that string is a value type. That's because its immutability (see next point) makes it act sort of like a value type. It actually acts like a normal reference type. See my articles on parameter passing and memory for more details of the differences between value types and reference types.
+- It's immutable
+- You can never actually change the contents of a string, at least with safe code which doesn't use reflection. Because of this, you often end up changing the value of a string variable. For instance, the code s = s.Replace ("foo", "bar"); doesn't change the contents of the string that s originally referred to - it just sets the value of s to a new string, which is a copy of the old string but with "foo" replaced by "bar".
+- It can contain nulls
+- C programmers are used to strings being sequences of characters ending in '\0', the nul or null character. (I'll use "null" because that's what the Unicode code chart calls it in the detail; don't get it confused with the null keyword in C# - char is a value type, so can't be a null reference!) In .NET, strings can contain null characters with no problems at all as far as the string methods themselves are concerned. However, other classes (for instance many of the Windows Forms ones) may well think that the string finishes at the first null character - if your string ever appears to be truncated oddly, that could be the problem.
+- It overloads the == operator
+- When the == operator is used to compare two strings, the Equals method is called, which checks for the equality of the contents of the strings rather than the references themselves. For instance, "hello".Substring(0, 4)=="hell" is true, even though the references on the two sides of the operator are different (they refer to two different string objects, which both contain the same character sequence). Note that operator overloading only works here if both sides of the operator are string expressions at compile time - operators aren't applied polymorphically. If either side of the operator is of type object as far as the compiler is concerned, the normal == operator will be applied, and simple reference equality will be tested.
+
+Main methods:
+- Clone()			- Make clone of string.
+- CompareTo()		- Compare two strings and returns integer value as output. It returns 0 for true and 1 for false.
+- Contains()		- The C# Contains method checks whether specified character or string is exists or not in the string value.
+- EndsWith()		- This EndsWith Method checks whether specified character is the last character of string or not.
+- Equals()			- The Equals Method in C# compares two string and returns Boolean value as output.
+- GetHashCode()		- This method returns HashValue of specified string.
+- GetType()			- It returns the System.Type of current instance.
+- GetTypeCode()		- It returns the Stystem.TypeCode for class System.String.
+- IndexOf()			- Returns the index position of first occurrence of specified character.
+- ToLower()			- Converts String into lower case based on rules of the current culture.
+- ToUpper()			- Converts String into Upper case based on rules of the current culture.
+- Insert()			- Insert the string or character in the string at the specified position.
+- IsNormalized()	- This method checks whether this string is in Unicode normalization form C.
+- LastIndexOf()		- Returns the index position of last occurrence of specified character.
+- Length			- It is a string property that returns length of string.
+- Remove()			- This method deletes all the characters from beginning to specified index position.
+- Replace()			- This method replaces the character.
+- Split()			- This method splits the string based on specified value.
+- StartsWith()		- It checks whether the first character of string is same as specified character.
+- Substring()		- This method returns substring.
+- ToCharArray()		- Converts string into char array.
+- Trim()			- It removes extra whitespaces from beginning and ending of string.
