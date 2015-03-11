@@ -11,7 +11,8 @@
         private string _manufacturer;
         private double _price;
         private string _owner;
-        private static readonly GSM _IPhone4S = new GSM("IPhone 4S", "Apple", 1200);
+        private static readonly GSM _IPhone4S = new GSM("IPhone 4S", "Apple", 1200, null,
+            new Battery(BatteryType.LiPo, "1432", 200, 14), new Display(3.5, 16000000));
 
         public GSM(string model, string manufacturer, double price = 0, string owner = null, Battery battery = null, Display display = null)
         {
