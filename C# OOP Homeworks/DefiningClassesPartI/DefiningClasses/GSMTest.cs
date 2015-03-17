@@ -16,6 +16,7 @@
             var myGSM2 = new GSM("One", "HTC", 638, "Krali Marko",
     new Battery(BatteryType.LiPo, "2300", 500, 27), new Display(4.7, 16000000));
             GSMs.Add(myGSM2);
+            Console.WriteLine(myGSM.Display);
 
             foreach (var phone in GSMs)
             {
