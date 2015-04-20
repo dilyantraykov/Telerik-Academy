@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+</head>
+<body>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+		td:first-child {
+			text-align: center;
+			max-width: 200px;
+		}
+		table, th, td {
+			border: 1px solid black;
+		}
+		label {
+			font-weight: 800;
+		}
+		tfoot {
+			background-color: #87CDEA;
+		}
+	</style>
+	<form action="#">
+		<table cellpadding="5">
+		<tbody>
+			<tr>
+				<td><label for="lastName">Last Name</label></td>
+				<td><input type="text" name="LastName" id="lastName" size="30" /></td>
+			</tr>
+			<tr>
+				<td><label for="firstName">First Name</label></td>
+				<td><input type="text" name="firstName" id="firstName" size="30" /></td>
+			</tr>
+			<tr>
+				<td><label for="address">Address</label></td>
+				<td><textarea name="address" id="address"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="city">City</label></td>
+				<td><input type="text" name="city" id="city" size="20" />
+					<label for="state">State</label>
+					<input type="text" name="state" id="state" size="4" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="zip">Zip/Postal Code</label></td>
+				<td><input type="text" name="zip" id="zip" /></td>
+			</tr>
+			<tr>
+				<td><label for="country">Country</label></td>
+				<td><select name="country" id="country">
+					<option value="Bulgaria">Bulgaria</option>
+					<option value="Burkina Faso">Burkina Faso</option>
+					<option value="Burundi">Burundi</option>
+					<option value="Cambodia">Cambodia</option>
+					<option value="Cameroon">Cameroon</option>
+					<option value="Canada">Canada</option>
+					<option value="Cape Verde">Cape Verde</option>
+					<option value="Cayman Islands">Cayman Islands</option>
+					<option value="Chad">Chad</option>
+					<option value="Chile">Chile</option>
+					<option value="China">China</option>
+					<option value="Christmas Island">Christmas Island</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Comoros">Comoros</option>
+					<option value="Congo">Congo</option>
+					<option value="Cook Islands">Cook Islands</option>
+					<option value="Costa Rica">Costa Rica</option>
+					<option value="Cote D'ivoire">Cote D'ivoire</option>
+					<option value="Croatia">Croatia</option>
+					<option value="Cuba">Cuba</option>
+					<option value="Cyprus">Cyprus</option>
+					<option value="Czech Republic">Czech Republic</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label for="phone-number">Phone (country code, area code, number)</label></td>
+				<td>
+					(+<input type="text" name="phone-code" size="5" />)
+					<input type="text" name="phone-area" size="5" />
+					- <input type="text" name="phone-number" size="15" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="email">Email</label></td>
+				<td>
+					<input type="text" name="email" id="email" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="birthday">Birth date</label></td>
+				<td>
+					<input type="date" name="birthday" id="birthday" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="gender">Gender</label></td>
+				<td>
+					<select name="gender" id="gender">
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="starting-date">Starting date</label></td>
+				<td>
+					<input type="radio" name="starting-date" value="Spring 2015" checked />Spring 2015
+					<input type="radio" name="starting-date" value="Summer 2015" />Summer 2015
+				</td>
+			</tr>
+			<tr>
+				<td><label for="comments">Comments/Questions</label></td>
+				<td>
+					<textarea name="comments"
+					id="comments">
+				</textarea>
+			</td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="2">
+				<input type="submit" value="Submit" />
+				<input type="button" value="Clean this form" />
+			</tr>
+		</tfoot>
+	</table>
+</form>
+</body>
+</html>

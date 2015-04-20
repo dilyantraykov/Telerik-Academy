@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Component</title>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+		table, tr, td, th {
+			border: 1px solid gray;
+		}
+		thead, tfoot {
+			background-color: #E6E8EA;
+			text-align: left;
+		}
+		tfoot {
+			text-align: left;
+		}
+		tfoot td {
+			border: none;
+		}
+		tfoot td:last-child {
+			text-align: right;
+		}
+		th {
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+	<table cellpadding="10">
+		<colgroup>
+		<col width="50px"></colgroup>
+		<col width="300px"></colgroup>
+		<col width="200px"></colgroup>
+		<col width="200px"></colgroup>
+		<col width="200px"></colgroup>
+		<col width="100px"></colgroup>
+	</colgroup>
+	<thead>
+		<tr>
+			<th colspan="6">Drag a column header and drop it here to group by that column</th>
+		</tr>
+		<tr>
+			<th>ProductID</th>
+			<th>Product name</th>
+			<th>Unit price&nbsp;<button>Filter</button></th>
+			<th>Quantity per unit</th>
+			<th>Units in stock&nbsp;<button>Filter</button></th>
+			<th>Discontinued&nbsp;<button>Filter</button></th>
+		</tr>
+		<tr>
+			<th><input type="text" size="4" /></th>
+			<th><input type="text" size="20" /></th>
+			<th><input type="text" size="10" /></th>
+			<th><input type="text" size="10" /></th>
+			<th><input type="text" size="10" /></th>
+			<th><input type="checkbox" /></th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td colspan="4">
+				<button>&#8592;</button>
+				<button>&#9668;</button>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				<a href="#">9</a>
+				<a href="#">10</a>
+				<a href="#">...</a>
+				<button>&#9658;</button>
+				<button>&#8594;</button>
+				&nbsp;
+				Page size: 
+				<select>
+					<option value="10">10</option>
+				</select>
+			</td>
+			<td colspan="2">335104 items in 33511 pages</td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox" disabled="disabled" /></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
