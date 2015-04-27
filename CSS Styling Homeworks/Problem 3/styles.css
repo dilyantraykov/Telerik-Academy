@@ -1,0 +1,41 @@
+body {
+	background-color: #A8A8A8;
+	font-size: 140%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #F9F9D2;
+}
+
+a {
+	text-decoration: none;
+}
+
+article > footer > p {
+	font-size: 80%;
+}
+
+article > footer > p > a {
+	color: black;
+}
+
+body > header > h1, nav, body > footer {
+	text-align: center;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+	color: white;
+	font-weight: bold;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav a:visited {
+	background-color: #D4D2D2;
+}

@@ -1,0 +1,45 @@
+body {
+	font-family: Arial, sans-serif;
+	color: #BBB;
+	background-color: #585858;
+}
+
+h1 {
+	font-weight: 300;
+}
+
+a {
+	color: #FDEEAF;
+	text-decoration: none;
+}
+
+table td {
+	vertical-align: top;
+	padding: 0 20px 10px 0;
+}
+
+table td:first-child {
+	color: white;
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
+.circle {
+	display: inline-block;
+	margin-right: 5px;
+	background: #70B37A;
+	border-radius: 50%;
+	width: 14px;
+	height: 14px; 
+}
