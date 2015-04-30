@@ -1,0 +1,72 @@
+html,
+body,
+header,
+ul,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 5px;
+  float: left;
+  color: #575E5B;
+}
+#wrapper header {
+  background-image: url("images/header-bg.png");
+  padding: 15px 8px 15px 15px;
+}
+#wrapper header h1,
+#wrapper header nav ul,
+#wrapper header nav li {
+  display: inline-block;
+  vertical-align: middle;
+}
+#wrapper header h1 {
+  float: left;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#wrapper header nav {
+  font-size: 14px;
+  float: right;
+  text-align: right;
+}
+#wrapper header nav li {
+  margin-right: 15px;
+}
+#wrapper #searchBar {
+  padding: 10px 8px;
+  background-color: black;
+  font-size: 14px;
+  color: #C6C6C6;
+}
+#wrapper #searchBar a {
+  text-decoration: none;
+  color: #C6C6C6;
+}
+#wrapper #searchBar #archives,
+#wrapper #searchBar #search {
+  display: inline-block;
+}
+#wrapper #searchBar #archives {
+  float: left;
+}
+#wrapper #searchBar #search {
+  float: right;
+}
+#wrapper #content {
+  font-size: 14px;
+}
+#wrapper #content h1 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+.clear {
+  clear: both;
+}

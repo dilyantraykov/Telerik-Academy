@@ -1,0 +1,80 @@
+html, body, header, ul, h1 {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 5px;
+	float: left;
+	color: #575E5B;
+	
+	header {
+		background-image: url("images/header-bg.png");
+		padding: 15px 8px 15px 15px;
+
+		h1, nav ul, nav li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		h1 {
+			float: left;
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+
+		nav {
+			font-size: 14px;
+			float: right;
+			text-align: right;
+
+			li {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	#searchBar {
+		padding: 10px 8px;
+		background-color: black;
+		font-size: 14px;
+		color: #C6C6C6;
+
+
+		a {
+			text-decoration: none;
+			color: #C6C6C6;
+		}
+
+		#archives, #search {
+			display: inline-block;
+		}
+
+		#archives {
+			float: left;
+		}
+
+		#search {
+			float: right;
+		}
+	}
+
+	#content {
+		font-size: 14px;
+
+		h1 {
+			margin-top: 15px;
+			font-size: 24px;
+		}
+	}
+}
+
+.clear {
+	clear: both;
+}
