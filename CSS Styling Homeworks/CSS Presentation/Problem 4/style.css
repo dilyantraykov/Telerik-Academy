@@ -1,0 +1,183 @@
+body, header, h1, button, div {
+	padding: 0;
+	margin: 0;
+}
+
+#main-window {
+	width: 475px;
+	padding: 10px;
+	background-color: #63B4FB;
+	font-size: 16px;
+	font-family: 'Consolas';
+}
+
+#main-window > header {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#main-window > header img {
+	float: left;
+	vertical-align: middle;
+	display: inline-block;
+	width: 16px;
+	margin-left: 5px;
+}
+
+#main-window > header h1 {
+	margin-left: 100px;
+	font-family: 'Segoe UI';
+	font-size: 1.1em;
+	font-weight: normal;
+	display: inline-block;
+}
+
+#main-window > header #buttons {
+	float: right;
+	margin-top: -10px;
+}
+
+#main-window > header #buttons button {
+	font-size: 0.7em;
+	display: inline-block;
+	background: none;
+	border: 0;
+	padding: 5px 10px;
+}
+
+#main-window > header #buttons button:hover {
+	background-color: #3665B3;
+	color: white;
+}
+
+#main-window > header #buttons button:disabled {
+	background: none;
+	color: gray;
+}
+
+#main-window > header #buttons #close {
+	color: white;
+	background-color: #C75050;
+	padding: 5px 20px;
+}
+
+#main-window > header #buttons #close:hover {
+	background-color: #E04343;
+}
+
+#calc {
+	display: inline-table;
+	border: 1px solid #8E9DAF;
+	background: linear-gradient(#F1F1F1, #DBE6F2 80%);
+	color: #223F61;
+}
+
+#nav {
+	width: 100%;
+	border-bottom: 1px solid #8E9DAF;
+	padding-left: 5px;
+	margin-bottom: 5px;
+	font-family: 'Arial';
+	font-size: 15px;
+	background-color: #F5F6F7;
+	color: #000000;
+}
+
+#nav tr td:first-letter {
+	text-decoration: underline;
+}
+
+#display {
+	width: 460px;
+	height: 50px;
+	margin: 3px;
+	padding-right: 5px;
+	text-align: right;
+	font-size: 25px;
+	font-family: 'Consolas';
+	background: linear-gradient(#E7EFFB, #ffffff);
+	border: 1px solid #8e9daf;    
+	border-radius: 3px;
+	box-shadow: inset 0 0 10px #ffffff;
+}
+
+#binary {
+	width: 98%;
+	border: 1px solid #8E9DAF;
+	border-radius: 3px;
+	box-shadow: inset 0 0 10px #ffffff;
+	margin: 4px;
+}
+
+#binary tr td {
+	font-size: 13px;
+	padding: 0 10px 0 10px;
+}
+
+#binary tr:nth-child(even) {
+	color: #999999;
+}
+
+
+article > fieldset {
+	vertical-align: middle;
+	font-size: 0.9em;
+	margin-top: 8px;
+	width: 80px;
+	padding: 13px;
+	border: 1px solid #8E9DAF;
+	border-radius: 5px;
+}
+
+article > fieldset > input[type="radio"] {
+	margin: 5px;
+	vertical-align: middle;
+}
+
+article > fieldset > label {
+	margin-left: -10px;
+}
+
+#buttonTable tr td {
+	margin: 0;
+	width: 40px;
+	height: 40px;
+}
+
+#calc button {
+	color: #223F61;
+	padding: 1px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Verdana';
+	font-weight: lighter;
+	font-variant: small-caps;
+	font-size: 0.8em;
+	margin: 0;
+	border: 1px solid #93A1B1;
+	border-radius: 2px;
+	background: linear-gradient(#EEF4F9 50%, #D8E3F0 50%);
+	box-shadow: inset 0 0 10px #F8FBFF;
+}
+
+#calc button:disabled {
+	background: none;
+	background-color: #DBE6F2;
+	box-shadow: none;
+}
+
+#calc button:hover:enabled {
+	border-color: #F6D712;
+	background: linear-gradient(#FDEEDE 50%, #FBD47E 50%);
+	box-shadow: inset 0 0 10px #FEFBF8;
+}
+
+#calc button.digit {
+	font-size: 1em;
+	font-weight: normal;
+	background: linear-gradient(#F7FAFE 50%, #E9F0F7 50%);
+}
+
+#fieldsets, #buttonTable {
+	float: left;
+}
