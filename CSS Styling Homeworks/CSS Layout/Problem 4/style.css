@@ -1,0 +1,140 @@
+body {
+	font-family: Calibri, "Trebuchet MS", Tahoma, Arial, "Courier New", Serif;
+	background-color: #f1f1f1;
+	width: 958px;
+}
+
+body > nav, body > section {
+	float: left;
+}
+
+body > nav {
+	width: 165px;
+	line-height: 16px;
+}
+
+body > aside {
+	width: 180px;
+}
+
+body > aside {
+	float: right;
+}
+
+body > section {
+	width: 600px;
+	padding: 5px;
+	border: 1px solid black;
+	background-color: white;
+}
+body > nav > div > a,#home, section > header > nav > a, section > footer > nav > a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body > nav > div > a, #home {
+	display: block;
+}
+
+body > section > header > nav > .prev:before,
+body > section > footer > nav > .prev:before {
+	position: absolute;
+	top: -3px;
+	left: 0px;
+	content: '\25C0';
+}
+
+body > section > header > nav > .next:after,
+body > section > footer > nav > .next:after {
+	position: absolute;
+	top: -3px;
+	right: 0px;
+	content: '\25b6';
+}
+
+#home {
+	font-weight: bold;
+	padding-left: 22px;
+	padding-top: 4px;
+	height: 20px;
+	background-image: url(images/home.png);
+	background-repeat: no-repeat;
+	background-size: 18px;
+	margin-top: 20px;
+}
+
+nav h3 {
+	color: #8B0000;
+	margin: 20px 0 0 0;
+}
+
+header {
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+}
+
+section > header > nav > a, section > footer > nav > a {
+	position: relative;
+	width: 120px;
+	border: 1px solid black;
+	display: inline-block;
+	text-align: center;
+}
+
+a {
+	color: #8B0000;
+}
+
+h2 {
+	font-size: 1em;
+	font-weight: bold;
+	background-color: gray;
+	color: white;
+	padding: 0 5px;
+}
+
+body > section > footer {
+	margin: 10px 0 40px 0;
+	padding: 5px 0;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+aside > div {
+	border: 1px solid black;
+	text-align: center;
+	margin: 0px 2px 2px 2px;
+	padding: 0 0 5px 0;
+	background-color: white;
+}
+
+aside > div > h2 {
+	margin: 0px;
+}
+
+input[type="text"] {
+	margin: 5px 10px;
+	width: 100px;
+}
+
+#boldSection > p, #boldSection > h2 {
+	font-weight: 900;
+}
+
+#imageContainer {
+	float: left;
+	height: 100px;
+	margin-right: 10px;
+	clear: both;
+}
+
+button {
+	margin: 3px;
+	width: 130px;
+	height: 40px;
+	font-weight: 900;
+	color: #26c7ff;
+	background-image: url(images/button.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}

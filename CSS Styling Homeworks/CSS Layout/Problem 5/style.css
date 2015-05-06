@@ -1,0 +1,112 @@
+html, body, header, article, section, aside, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Corbel';
+    font-size: 22px;
+}
+
+#wrapper {
+    margin: 20px;
+    width: 850px;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+header {
+    margin: 0px 20px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+header nav {
+    display: inline;
+    padding: 3px;
+    margin: 20px;
+    text-align: center;
+}
+
+header nav a {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 3px;
+    color: #05B4F1;
+}
+
+section {
+    width: 560px;
+    border: 1px solid #000000;
+    overflow: auto;
+    padding: 1px;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+
+article {
+    margin: 0;
+}
+
+fieldset {
+    margin: 0 1px;
+    padding: 0;
+    display: inline-block;
+    width: 270px;
+    float: left;
+}
+
+fieldset legend {
+    margin: 0 30px;
+}
+
+fieldset img {
+    width:120px;
+    height:70px;
+    margin:10px;
+    float:left;
+}
+
+fieldset > span {
+    display: block;
+    margin: 5px;
+}
+
+fieldset > span:first-of-type {
+    margin-top:20px;
+}
+
+fieldset > footer {
+    margin: 20px 10px 10px 30px;
+}
+
+fieldset > footer > span {
+    margin: 5px;
+}
+
+aside {
+    float: left;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 80px 10px;
+}
+
+aside ul > li {
+    padding: 10px 0px;
+    font-size: 1.1em;
+}
+
+input[type="range"] {
+    margin-top: 10px;
+    width: 180px;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

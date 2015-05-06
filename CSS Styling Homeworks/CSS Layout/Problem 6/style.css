@@ -1,0 +1,76 @@
+body, html, nav, ul, li, img {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	background-color: #1E3741;
+	width: 610px;
+	border-radius: 5px;
+}
+
+#wrapper > header > nav > ul {
+	list-style-type: none;
+	padding: 18px 0px;
+}
+
+#wrapper > header > nav > ul > li {
+	display: inline-block;
+}
+
+#wrapper > header > nav > ul > li > a {
+	font-weight: bold;
+	color: #81A6B3;
+	padding: 10px 11px;
+	background-color: #4B5F67;
+	text-decoration: none;
+}
+
+#wrapper > header > nav > ul > li > a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#wrapper > header > nav > ul > li > a.selected {
+	color: white;
+	background: none;
+}
+
+#wrapper > aside {
+	float: left;
+}
+
+#wrapper > aside > nav > ul {
+	width: 240px;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	list-style-type: none;
+}
+
+#wrapper > aside > nav > ul > li {
+	border-bottom: 1px solid #859298;
+}
+
+#wrapper > aside > nav > ul > li > a {
+	color: #859298;
+	text-decoration: none;
+	padding: 10px 15px 10px 10px;
+	display: block;
+}
+
+#wrapper > aside > nav > ul > li > a.selected {
+	color: white;
+	background-color: #00968C;
+}
+
+#wrapper > section {
+	float: left;
+}
+
+.clearfix {
+	overflow: auto;
+	zoom: 1;
+}
