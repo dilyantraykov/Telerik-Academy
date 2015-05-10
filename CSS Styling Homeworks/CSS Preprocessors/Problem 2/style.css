@@ -1,0 +1,27 @@
+html,
+body,
+div,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+}
+body #wrapper #thumbnails {
+  text-align: center;
+  list-style-type: none;
+}
+body #wrapper #thumbnails li {
+  display: inline-block;
+}
+body #wrapper #thumbnails li img {
+  width: 200px;
+  height: 200px;
+}
+body #zoomedImage {
+  text-align: center;
+}
+body #zoomedImage img {
+  width: 400px;
+  height: 400px;
+}
