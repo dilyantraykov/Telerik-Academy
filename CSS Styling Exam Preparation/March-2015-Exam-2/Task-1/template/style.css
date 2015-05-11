@@ -1,0 +1,72 @@
+html,
+body,
+header,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+#wrapper header {
+  background-image: url("images/header-bg.png");
+}
+#wrapper header #title {
+  float: left;
+  padding: 20px;
+}
+#wrapper header #title h1 {
+  color: #EEFFEE;
+  font-size: 34px;
+}
+#wrapper header #title h2 {
+  color: #C0C0C0;
+  font-size: 14px;
+  font-weight: normal;
+}
+#wrapper header nav {
+  float: right;
+  font-size: 18px;
+  vertical-align: bottom;
+  padding: 25px 15px 15px 15px;
+}
+#wrapper header nav li {
+  margin-right: 15px;
+  font-weight: bold;
+  color: #CC6600;
+  display: inline-block;
+}
+#wrapper #line {
+  background-color: #39C518;
+  height: 5px;
+  margin-bottom: 20px;
+}
+#wrapper #content {
+  float: left;
+  width: 760px;
+  color: #555555;
+}
+#wrapper #content h1 {
+  font-size: 30px;
+  color: #59770E;
+}
+#wrapper #aside {
+  float: left;
+  width: 200px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #59770E;
+}
+#wrapper #aside input {
+  width: 150px;
+}
+.clear {
+  clear: both;
+}

@@ -1,0 +1,68 @@
+html,
+body,
+div,
+ul,
+li,
+a,
+img {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  width: 960px;
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+}
+#wrapper .menu {
+  list-style-type: none;
+  width: 170px;
+}
+#wrapper .menu li {
+  position: relative;
+  text-align: center;
+  background-color: #b6ff00;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#wrapper .menu li:hover .content {
+  display: block;
+}
+#wrapper .menu li:hover > a {
+  text-decoration: underline;
+}
+#wrapper .menu li a {
+  color: #000;
+  text-decoration: none;
+}
+#wrapper .menu li .content {
+  position: absolute;
+  top: 0px;
+  left: 170px;
+  display: none;
+}
+#wrapper .menu li .content ul {
+  list-style-type: none;
+}
+#wrapper .menu li .content ul li {
+  color: #fff;
+  width: 500px;
+  padding: 20px;
+  text-align: left;
+  background-color: #008000;
+}
+#wrapper .menu li .content ul li:hover a {
+  text-decoration: underline;
+}
+#wrapper .menu li .content ul li:hover img {
+  margin-top: 5px;
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+}
+#wrapper .menu li .content ul li img {
+  display: none;
+}
+#wrapper .menu li .content ul li a {
+  color: #fff;
+}

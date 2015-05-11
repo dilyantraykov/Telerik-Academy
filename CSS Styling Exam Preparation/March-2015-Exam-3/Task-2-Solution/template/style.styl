@@ -1,0 +1,52 @@
+html, body, div, ul, li, a, img
+	margin 0
+	padding 0
+
+#wrapper
+	width 960px
+	font-family Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+	font-size 16px
+	
+	.menu
+		list-style-type none
+		width 170px
+		li
+			position relative
+			text-align center
+			background-color #B6FF00
+			border-radius 15px
+			padding 10px
+			margin-bottom 10px
+			&:hover
+				.content
+					display block
+				& > a
+					text-decoration underline
+			a
+				color black
+				text-decoration none
+			.content
+				position absolute
+				top 0px
+				left 170px
+				display none
+				ul
+					list-style-type none
+					li
+						color white
+						width 500px
+						padding 20px
+						text-align left
+						background-color #008800
+						&:hover
+							a
+								text-decoration underline
+							img
+								margin-top 5px
+								display block
+								border-radius 10px
+								width 100%
+						img
+							display none
+						a
+							color white
