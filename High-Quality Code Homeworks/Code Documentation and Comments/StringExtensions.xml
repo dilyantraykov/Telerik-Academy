@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StringExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:StringExtensions.StringExtensions">
+            <summary>
+            Static class providing various string extension methods: 
+            <list type="bullet">
+            <item> 
+            <description>ToMd5Hash,</description> 
+            </item> 
+            <item> 
+            <description>ToBoolean,</description> 
+            </item>
+            <item> 
+            <description>ToShort,</description> 
+            </item> 
+            <item> 
+            <description>ToInteger,</description> 
+            </item>
+            <item> 
+            <description>ToLong,</description> 
+            </item>
+            <item> 
+            <description>ToDateTime,</description> 
+            </item>
+            <item> 
+            <description>CapitalizeFirstLetter,</description> 
+            </item>
+            <item>
+            <description>ConvertCyrillicToLatinLetters,</description>
+            </item>
+            <item>
+            <description>ConvertLatinToCyrillicKeyboard,</description>
+            </item>
+            <item>
+            <description>ToValidUsername,</description>
+            </item>
+            <item>
+            <description>ToValidLatinFileName,</description>
+            </item>
+            <item>
+            <description>GetFirstCharacters,</description>
+            </item>
+            <item>
+            <description>GetFileExtension,</description>
+            </item>
+            <item>
+            <description>ToContentType,</description>
+            </item>
+            <item>
+            <description>ToByteArray,</description>
+            </item>
+            </list> 
+            </summary>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToMd5Hash(System.String)">
+            <summary>
+            A string extension method that converts the target string to a byte array, and 
+            computes the hashes for each element.
+            Then bytes are formatted as a hexadecimal strings and appended to the resulting
+            string that is finally returned.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>A hexadecimal string</returns>
+            <exception cref="T:System.Reflection.TargetInvocationException">The algorithm was used with Federal Information Processing Standards (FIPS) 
+            mode enabled, but is not FIPS compatible.</exception>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToBoolean(System.String)">
+            <summary>
+            A string extension method that checks whether the target string is contained within a 
+            predefined collection of true-like values.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>Whether the input is among the given true values (True/False)</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToShort(System.String)">
+            <summary>
+            Converts the target string to a short value and returns it.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The short value obtained from parsing the input string</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToInteger(System.String)">
+            <summary>
+            Converts the target string to an integer value and returns it.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The integer value obtained from parsing the input string</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToLong(System.String)">
+            <summary>
+            Converts the target string to a long value and returns it.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The long value obtained from parsing the input string</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToDateTime(System.String)">
+            <summary>
+            Converts the target string to a DateTime value and returns it.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The DateTime value obtained from parsing the input string</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.CapitalizeFirstLetter(System.String)">
+            <summary>
+            Capitalizes the first letter of the target string.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The string with capital first letter.</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.GetStringBetween(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Returns the substring between two given substrings.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <param name="startString">The start of the substring</param>
+            <param name="endString">The end of the substring</param>
+            <param name="startFrom">The index to start the search from</param>
+            <returns>The found substring or an empty one</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ConvertCyrillicToLatinLetters(System.String)">
+            <summary>
+            Replaces cyrillic letters in a string with their latin representation.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The new string with latin letters.</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ConvertLatinToCyrillicKeyboard(System.String)">
+            <summary>
+            Replaces latin letters in a string with their cyrillic representation.
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The new string with cyrillic letters.</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToValidUsername(System.String)">
+            <summary>
+            Converts a string into a valid username
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The string after the Cyrillic letters are converted to latin and all characters 
+            that are not alpha-numeric, ".", or "_", are removed.</returns>
+            <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException">A time-out occurred. For more information about time-outs, see the Remarks section.</exception>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToValidLatinFileName(System.String)">
+            <summary>
+            Converts a string into a valid latin filename
+            </summary>
+            <param name="input">The string the method is called upon.</param>
+            <returns>The string after the Cyrillic letters are converted to latin, spaces are replaced with "-",
+            and all characters that are not alpha-numeric, ".", "-", or "_", are removed.</returns>
+            <exception cref="T:System.Text.RegularExpressions.RegexMatchTimeoutException">A time-out occurred. For more information about time-outs, see the Remarks section.</exception>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.GetFirstCharacters(System.String,System.Int32)">
+            <summary>
+            Returns the first n characters from the string, where n is the second parameter.
+            </summary>
+            <param name="input">The string the method is called upon</param>
+            <param name="charsCount">The number of characters to be returned</param>
+            <returns>The first n characters from the string (or the whole string if charsCount
+            is larger than the length of the string).</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.GetFileExtension(System.String)">
+            <summary>
+            Returns the file extension of the given filename.
+            </summary>
+            <param name="fileName">The string (filename) the method is called upon.</param>
+            <returns>The file extension of the filename</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToContentType(System.String)">
+            <summary>
+            Returns the content type of a file depending on its extension.
+            </summary>
+            <param name="fileExtension">The file extension</param>
+            <returns>The content type associated with the given file extension</returns>
+        </member>
+        <member name="M:StringExtensions.StringExtensions.ToByteArray(System.String)">
+            <summary>
+            Converts a string into an array of bytes
+            </summary>
+            <param name="input">The string the method is called upon</param>
+            <returns>An array of bytes derived from converting every character 
+            in the given string to its byte representation</returns>
+            <exception cref="T:System.OverflowException">The array is multidimensional and contains more than <see cref="F:System.Int32.MaxValue"/> elements.</exception>
+        </member>
+    </members>
+</doc>
