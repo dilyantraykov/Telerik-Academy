@@ -1,0 +1,9 @@
+﻿<#@ template hostspecific="false" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ import namespace="System" #> 
+<#int start = 10, end = 30;
+
+for (int i = start; i <= end; i++) 
+{ #>
+   The square root of <#= i #> is <#= String.Format("{0:F4}", Math.Sqrt(i)) #>
+<# } #>

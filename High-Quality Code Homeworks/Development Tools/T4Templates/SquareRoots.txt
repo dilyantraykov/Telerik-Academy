@@ -1,0 +1,22 @@
+﻿ 
+   The square root of 10 is 3.1623
+   The square root of 11 is 3.3166
+   The square root of 12 is 3.4641
+   The square root of 13 is 3.6056
+   The square root of 14 is 3.7417
+   The square root of 15 is 3.8730
+   The square root of 16 is 4.0000
+   The square root of 17 is 4.1231
+   The square root of 18 is 4.2426
+   The square root of 19 is 4.3589
+   The square root of 20 is 4.4721
+   The square root of 21 is 4.5826
+   The square root of 22 is 4.6904
+   The square root of 23 is 4.7958
+   The square root of 24 is 4.8990
+   The square root of 25 is 5.0000
+   The square root of 26 is 5.0990
+   The square root of 27 is 5.1962
+   The square root of 28 is 5.2915
+   The square root of 29 is 5.3852
+   The square root of 30 is 5.4772
