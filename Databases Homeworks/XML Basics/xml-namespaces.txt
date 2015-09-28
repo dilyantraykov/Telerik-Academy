@@ -1,0 +1,2 @@
+﻿A namespace is a set of names in which all names are unique.
+XML Namespaces provide a method to avoid element name conflicts.

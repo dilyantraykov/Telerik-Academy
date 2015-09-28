@@ -22,7 +22,35 @@
                         <xs:sequence>
                           <xs:element name="name" type="xs:string" />
                           <xs:element name="tutor" type="xs:string" />
-                          <xs:element name="score" type="xs:unsignedByte" />
+                          <xs:element name="score" type="xs:unsignedInt" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="endorsements">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="endorsement">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="teacher" type="xs:string" />
+                          <xs:element name="text" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="enrollments">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="enrollment">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="date" type="xs:date" />
+                          <xs:element name="score" type="xs:unsignedInt" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>

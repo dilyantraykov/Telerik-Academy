@@ -1,0 +1,4 @@
+﻿XML is a markup language that was designed to store and transport data.
+XML stores data in plain text format.
+This provides a software- and hardware-independent way of storing, transporting, and sharing data.
+With XML, data can be available to all kinds of "reading machines" like people, computers, voice machines, news feeds, etc.
