@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fortune cookies</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+</head>
+
+<style>
+
+  #container-sign-in,
+  #container-sign-out {
+    margin-top: 40px;
+  }
+
+</style>
+
+<body>
+  <div id="root">
+    <header class="container">
+      <div class="row">
+        <h1 class="page-header col-md-6">Fortune cookies</h1>
+        <form class="form-inline col-md-6" id="container-sign-in">
+          <div class="form-group">
+            <label class="sr-only" for="tb-username">Username</label>
+            <input type="text" class="form-control" id="tb-username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="tb-password">Password</label>
+            <input type="password" class="form-control" id="tb-password" placeholder="Password">
+          </div>
+          <button id="btn-sign-in" class="btn btn-default">Sign in</button>
+        </form>
+        <form class="form-inline col-md-6" id="container-sign-out">
+          <button id="btn-sign-out" class="btn btn-default">Sign out</button>
+        </form>
+      </div>
+      <nav class="navbar row">
+        <ul id="main-nav" class="nav nav-tabs nav-justified col-md-8">
+          <li id="home-nav-item"><a href="./#/">Home</a></li>
+          <li id="cookies-nav-item"><a href="./#/cookies">Cookies</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content" class="container">
+
+    </div>
+  </div>
+
+  <!-- Libs -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/sammy/lib/sammy.js"></script>
+  <script src="bower_components/handlebars/handlebars.js"></script>
+  <script src="bower_components/sha1/index.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/toastr/toastr.js"></script>
+
+  <!-- App -->
+
+  <!-- App: Controllers -->
+  <script src="controllers/helpers/controller-helpers.js"></script>
+  <script src="controllers/usersController.js"></script>
+  <script src="controllers/cookiesController.js"></script>
+  <script src="controllers/myCookieController.js"></script>
+
+  <!-- App: Loaders -->
+  <script src="app/data.js"></script>
+  <script src="app/templates.js"></script>
+  <script src="app/validator.js"></script>
+  <script src="app/json-requester.js"></script>
+
+  <!-- App: Start -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>

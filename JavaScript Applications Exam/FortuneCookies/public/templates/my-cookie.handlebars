@@ -1,0 +1,27 @@
+<div class="row">
+{{#each this}}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cookie-box" data-id="{{id}}">
+      <h3 class="text-center">{{text}}</h3>
+      <img src="{{img}}" alt="{{text}}">
+      <div class="row caption">
+        <div class="col-xs-12">
+        <p class="shared-on">Shared on <strong>{{shareDate}}</strong></p>
+        {{#if user}}
+        <p class="shared-by"> by <strong>{{user}}</strong></p>
+        {{/if}}
+        </div>
+        <div class="col-xs-4">
+          <button class="btn btn-success"><strong class="badge likes">{{likes}}</strong> Likes</button>
+        </div>
+        <div class="col-xs-4 text-center">
+          <button class="reshare-cookie-btn btn btn-info">Reshare</button>
+        </div>
+        <div class="col-xs-4 text-right">
+          <button class="btn btn-danger"><strong class="badge dislikes">{{dislikes}}</strong> Dislikes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>

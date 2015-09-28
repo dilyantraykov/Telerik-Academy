@@ -1,0 +1,43 @@
+<div class="row">
+<div class="btn-group" role="group">
+  <button type="button" id="sort-by-date" class="btn btn-default">Sort by date</button>
+  <button type="button" id="sort-by-likes" class="btn btn-default">Sory by likes</button>
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Categories
+      <span class="caret"></span>
+    </button>
+    <ul id="categories-sort-dropdown" class="dropdown-menu">
+    </ul>
+  </div>
+</div>
+</div>
+
+<br />
+<div class="row">
+{{#each this}}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cookie-box" data-id="{{id}}" data-category="{{category}}" data-img="{{img}}" data-text="{{text}}">
+      <h3 class="text-center">{{text}}</h3>
+      <img src="{{img}}" alt="{{text}}">
+      <div class="row caption">
+        <div class="col-xs-12">
+        <p class="shared-on">Shared on <strong>{{shareDate}}</strong></p>
+        {{#if user}}
+        <p class="shared-by"> by <strong>{{user}}</strong></p>
+        {{/if}}
+        </div>
+        <div class="col-xs-4">
+          <button class="btn btn-success"><strong class="badge likes">{{likes}}</strong> Likes</button>
+        </div>
+        <div class="col-xs-4 text-center">
+          <button class="reshare-cookie-btn btn btn-info">Reshare</button>
+        </div>
+        <div class="col-xs-4 text-right">
+          <button class="btn btn-danger"><strong class="badge dislikes">{{dislikes}}</strong> Dislikes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>
