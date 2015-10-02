@@ -1,0 +1,22 @@
+﻿body {
+    background-color: #777;
+}
+
+.video-frame {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.video-container {
+    width: 30%;
+    float: left;
+    margin: 1%;
+    text-align: center;
+}
+
+.video-title {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
