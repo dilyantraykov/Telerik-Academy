@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <album>
+    <name>Glyburide</name>
+    <artist>Ray Faulkner</artist>
+    <year>2016</year>
+    <producer>Anthony Allison</producer>
+    <price>18</price>
+    <songs>
+      <song>
+        <title>Et Foundation</title>
+        <duration>0,27</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Alprazolam</name>
+    <artist>Nina Gill</artist>
+    <year>2016</year>
+    <producer>Germaine Beasley</producer>
+    <price>20</price>
+    <songs>
+      <song>
+        <title>A Ltd</title>
+        <duration>0,43</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Clonazepam</name>
+    <artist>Nevada Mcpherson</artist>
+    <year>2016</year>
+    <producer>Dalton Britt</producer>
+    <price>14</price>
+    <songs>
+      <song>
+        <title>At Arcu Vestibulum LLP</title>
+        <duration>0,19</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Potato salad</name>
+    <artist>Evan Perry</artist>
+    <year>2012</year>
+    <producer>Solomon Norris</producer>
+    <price>13</price>
+    <songs>
+      <song>
+        <title>AC/DC Foundation</title>
+        <duration>0,56</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Fluticasone Propionate</name>
+    <artist>Hayfa Hammond</artist>
+    <year>2016</year>
+    <producer>Lesley Drake</producer>
+    <price>15</price>
+    <songs>
+      <song>
+        <title>Montes Nascetur Ridiculus Incorporated</title>
+        <duration>0,60</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Glipizide</name>
+    <artist>Alea Jefferson</artist>
+    <year>2016</year>
+    <producer>Sydney Hogan</producer>
+    <price>16</price>
+    <songs>
+      <song>
+        <title>Nunc Industries</title>
+        <duration>0,54</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Hydrochlorothiazide</name>
+    <artist>Nicole Puckett</artist>
+    <year>2014</year>
+    <producer>Hayfa Lucas</producer>
+    <price>18</price>
+    <songs>
+      <song>
+        <title>Odio Sagittis Semper Company</title>
+        <duration>0,22</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Omeprazole (Rx)</name>
+    <artist>Sandra Lara</artist>
+    <year>2008</year>
+    <producer>Sean Sharp</producer>
+    <price>15</price>
+    <songs>
+      <song>
+        <title>Est PC</title>
+        <duration>0,22</duration>
+      </song>
+    </songs>
+  </album>
+</catalog>

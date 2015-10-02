@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dir path="D:/Programming/FoodStore/">
+  <dir path="D:/Programming/FoodStore/.vs">
+    <dir path="D:/Programming/FoodStore/.vs\config">
+      <file name="applicationhost" ext=".config" />
+    </dir>
+    <dir path="D:/Programming/FoodStore/.vs\FoodStore">
+      <dir path="D:/Programming/FoodStore/.vs\FoodStore\v14">
+        <file name="" ext=".suo" />
+      </dir>
+    </dir>
+  </dir>
+  <dir path="D:/Programming/FoodStore/FoodStore">
+    <dir path="D:/Programming/FoodStore/FoodStore\App_Code">
+      <file name="ComboBoxItemData" ext=".cs" />
+      <file name="ComboBoxWcfService" ext=".cs" />
+      <file name="ComboBoxWebService" ext=".cs" />
+      <file name="Movie" ext=".cs" />
+      <file name="Products" ext=".cs" />
+      <file name="Territories" ext=".cs" />
+    </dir>
+    <dir path="D:/Programming/FoodStore/FoodStore\App_Data">
+      <file name="Northwind" ext=".mdf" />
+      <file name="Northwind_Log" ext=".ldf" />
+    </dir>
+    <dir path="D:/Programming/FoodStore/FoodStore\Bin">
+      <file name="Telerik.Web.UI" ext=".dll" />
+      <file name="Telerik.Web.UI.Skins" ext=".dll" />
+      <file name="Telerik.Web.UI" ext=".xml" />
+    </dir>
+    <dir path="D:/Programming/FoodStore/FoodStore\Images">
+      <dir path="D:/Programming/FoodStore/FoodStore\Images\card-types">
+        <file name="american-express" ext=".png" />
+        <file name="mastercard" ext=".png" />
+        <file name="visa-electron" ext=".png" />
+        <file name="visa" ext=".png" />
+      </dir>
+      <file name="background" ext=".jpg" />
+      <file name="panel-bg" ext=".gif" />
+      <file name="schedule-button" ext=".gif" />
+    </dir>
+    <file name="Default" ext=".aspx" />
+    <file name="Default.aspx" ext=".cs" />
+    <file name="PaymentMethods" ext=".xml" />
+    <file name="styles" ext=".css" />
+    <file name="Territories" ext=".asmx" />
+    <file name="web" ext=".config" />
+  </dir>
+  <file name="FoodStore" ext=".sln" />
+</dir>
