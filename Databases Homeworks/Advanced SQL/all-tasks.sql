@@ -359,20 +359,13 @@ ORDER BY [Number of employees] DESC
 ----------------------------
 
 /*
-SELECT t.Name AS Town, COUNT(*) AS [Number of managers] FROM Employees AS emp
-JOIN Employees m
-ON emp.ManagerID = m.EmployeeID
-JOIN Addresses a
-ON m.AddressID = a.AddressID
-JOIN Towns t
-ON a.TownID = t.TownID
-WHERE emp.EmployeeId 
-IN (SELECT DISTINCT m.EmployeeID
-FROM Employees e
-JOIN Employees m
-ON e.ManagerID = m.EmployeeID)
+SELECT t.Name AS [Town], COUNT(DISTINCT e.ManagerID) AS [No. of Managers]
+FROM Employees e, Employees m, Addresses a, Towns t
+WHERE 
+e.ManagerID = m.EmployeeID AND
+m.AddressID = a.AddressID AND
+a.TownID = t.TownID
 GROUP BY t.Name
-ORDER BY COUNT(*) DESC
 */
 
 ----------------------------
