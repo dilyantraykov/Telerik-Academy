@@ -1,3 +1,4 @@
+/*
 --------------------------------------
 -- 1. Create a database with two tables: 
 -- Persons(Id(PK), FirstName, LastName, SSN) and
@@ -12,7 +13,6 @@
 USE Bank
 GO
 
-/*
 CREATE TABLE Persons(
 	Id int NOT NULL IDENTITY PRIMARY KEY,
 	FirstName nvarchar(150) NOT NULL,
@@ -205,4 +205,124 @@ WHERE Id = 3
 -- Example: 'oistmiahf' will return 'Sofia', 'Smith', … but not 'Rob' and 'Guy'.
 --------------------------------------
 
+USE TelerikAcademy
+GO
+
+CREATE FUNCTION ufn_CheckName (@nameToCheck NVARCHAR(50),@letters NVARCHAR(50)) RETURNS INT
+AS
+BEGIN
+        DECLARE @i INT = 1
+		DECLARE @currentChar NVARCHAR(1)
+        WHILE (@i <= LEN(@nameToCheck))
+			BEGIN
+				SET @currentChar = SUBSTRING(@nameToCheck,@i,1)
+					IF (CHARINDEX(LOWER(@currentChar),LOWER(@letters)) <= 0) 
+						BEGIN  
+							RETURN 0
+						END
+				SET @i = @i + 1
+			END
+        RETURN 1
+END
+GO
+
+CREATE FUNCTION ufn_CheckIfNameConsistsOfLetters (@searchString NVARCHAR(200)) 
+RETURNS @T TABLE (Name nvarchar(200))
+AS
+BEGIN
+
+DECLARE employeeCursor CURSOR READ_ONLY FOR
+	(SELECT e.FirstName, e.LastName, t.Name FROM Employees e
+		JOIN Addresses a ON e.AddressID = a.AddressID
+		JOIN Towns t ON a.TownID=t.TownID)
+
+OPEN employeeCursor
+
+DECLARE @firstName NVARCHAR(200), 
+@lastName NVARCHAR(200), 
+@town NVARCHAR(200)
+
+DECLARE @tempTable TABLE (Name nvarchar(200))
+
+FETCH NEXT FROM employeeCursor INTO @firstName, @lastName, @town
+
+WHILE @@FETCH_STATUS = 0
+  BEGIN
+        DECLARE @i INT = 1
+		DECLARE @match nvarchar(200) = NULL
+		DECLARE @currentChar NVARCHAR(1)
+		IF (dbo.ufn_CheckName(@firstName, @searchString) = 1)
+			BEGIN
+				SET @match = @firstName
+			END
+		IF (dbo.ufn_CheckName(@lastName, @searchString) = 1)
+			BEGIN
+				SET @match = @lastName
+			END
+		IF (dbo.ufn_CheckName(@town, @searchString) = 1)
+			BEGIN
+				SET @match = @town
+			END
+
+		IF @match IS NOT NULL
+			INSERT INTO @tempTable
+			VALUES (@match)
+	FETCH NEXT FROM employeeCursor INTO @firstName, @lastName, @town
+  END
+
+CLOSE employeeCursor
+DEALLOCATE employeeCursor
+
+INSERT INTO @T
+SELECT DISTINCT Name FROM @tempTable
+
+RETURN
+END
+GO
+
+SELECT * FROM ufn_CheckIfNameConsistsOfLetters('oistmiahf')
+
+
+--------------------------------------
+-- 8. Define a function in the database TelerikAcademy that
+-- returns all Employee's names (first or middle or last name)
+-- and all town's names that are comprised of given set of letters.
+-- Example: 'oistmiahf' will return 'Sofia', 'Smith', … but not 'Rob' and 'Guy'.
+--------------------------------------
+
+USE TelerikAcademy
+GO
+
+DECLARE employeeCursor CURSOR READ_ONLY FOR
+    SELECT 
+		emp1.FirstName + ' ' + emp1.LastName AS [First Employee], 
+		t1.Name AS Town, 
+		emp2.FirstName + ' ' + emp2.LastName AS [Second Employee]
+    FROM Employees emp1, Employees emp2, Addresses a1, Towns t1, Addresses a2, Towns t2
+	WHERE 
+		emp1.AddressID = a1.AddressID AND 
+		a1.TownID = t1.TownID AND 
+		emp2.AddressID = a2.AddressID AND 
+		a2.TownID = t2.TownID AND 
+		t1.TownID = t2.TownID AND 
+		emp1.EmployeeID != emp2.EmployeeID
+    ORDER BY [First Employee], [Second Employee]
+
+OPEN employeeCursor
+
+DECLARE @firstEmployee nvarchar(200), 
+	    @secondEmployee nvarchar(200), 
+        @townName nvarchar(100)
+FETCH NEXT FROM employeeCursor INTO @firstEmployee, @townName, @secondEmployee
+
+WHILE @@FETCH_STATUS = 0
+	BEGIN
+		PRINT @firstEmployee + ' and ' + @secondEmployee + ' both live in ' + @townName;
+
+		FETCH NEXT FROM employeeCursor 
+		INTO @firstEmployee, @townName, @secondEmployee
+	END
+
+CLOSE employeeCursor
+DEALLOCATE employeeCursor
 */
