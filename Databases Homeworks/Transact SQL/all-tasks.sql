@@ -380,8 +380,8 @@ DEALLOCATE employeeCursor
 USE TelerikAcademy
 GO
 
-CREATE TABLE UsersTowns (ID INT IDENTITY, FullName NVARCHAR(50), TownName NVARCHAR(50))
-INSERT INTO UsersTowns
+CREATE TABLE #UsersTowns (ID INT IDENTITY, FullName NVARCHAR(50), TownName NVARCHAR(50))
+INSERT INTO #UsersTowns
 SELECT e.FirstName + ' ' + e.LastName, t.Name
                 FROM Employees e
                         INNER JOIN Addresses a
@@ -395,10 +395,10 @@ DECLARE @town NVARCHAR(50)
  
 DECLARE employeeCursor CURSOR READ_ONLY FOR
         SELECT DISTINCT ut.TownName
-                FROM UsersTowns ut     
+                FROM #UsersTowns ut     
  
 OPEN employeeCursor
-FETCH NEXT FROM empCursor1
+FETCH NEXT FROM employeeCursor
 	INTO @town
  
 	WHILE @@FETCH_STATUS = 0
@@ -406,14 +406,16 @@ FETCH NEXT FROM empCursor1
 			DECLARE @empName nvarchar(MAX);
 			SET @empName = N'';
 			SELECT @empName += ut.FullName + N', '
-			FROM UsersTowns ut
+			FROM #UsersTowns ut
 			WHERE ut.TownName = @town
 			PRINT @town + ' -> ' + LEFT(@empName,LEN(@empName)-1);
 
-			FETCH NEXT FROM empCursor1 INTO @town
+			FETCH NEXT FROM employeeCursor INTO @town
 		END
 CLOSE employeeCursor
 DEALLOCATE employeeCursor
+
+DROP TABLE #UsersTowns
 */
 
 --------------------------------------
