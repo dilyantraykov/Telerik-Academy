@@ -1,4 +1,17 @@
 /*
+To connect to the TelerikAcademy database, just run "Create-TelerikAcademy-Database-SQL-Script.sql" located in the same folder as this file with SSMS.
+Then just uncomment each of the tasks listed below to run the query.
+Comments include:
+-- single line comment
+
+/* multiple
+line
+comment */
+
+You'll also need to provide the full address to the file SqlStringConcatenation.dll in task 10.
+Have fun!
+*/ 
+
 --------------------------------------
 -- 1. Create a database with two tables: 
 -- Persons(Id(PK), FirstName, LastName, SSN) and
@@ -7,6 +20,7 @@
 -- Write a stored procedure that selects the full names of all persons.
 --------------------------------------
 
+/*
 --CREATE DATABASE Bank
 --GO
 
@@ -49,12 +63,17 @@ AS
 GO
 
 EXEC usp_SelectAllFullNames
+*/
 
 --------------------------------------
 -- 2. Create a stored procedure that accepts a number
 -- as a parameter and returns all persons 
 -- who have more money in their accounts than the supplied number.
 --------------------------------------
+
+/*
+USE Bank
+GO
 
 CREATE PROC usp_PersonsWhoHaveMoreMoneyThan(@amount int = 0)
 AS
@@ -65,6 +84,7 @@ AS
 GO
 
 EXEC usp_PersonsWhoHaveMoreMoneyThan 300
+*/
 
 --------------------------------------
 -- 3. Create a function that accepts as parameters – sum,
@@ -72,6 +92,10 @@ EXEC usp_PersonsWhoHaveMoreMoneyThan 300
 -- It should calculate and return the new sum.
 -- Write a SELECT to test whether the function works as expected.
 --------------------------------------
+
+/*
+USE Bank
+GO
 
 CREATE PROC usp_CalculateInterest
 @sum money = 0,
@@ -85,12 +109,17 @@ GO
 DECLARE @newSum money
 EXEC usp_CalculateInterest 1000, 0.03, 10, @newSum OUTPUT
 SELECT 'The new sum after 10 months is: ', @newSum
+*/
 
 --------------------------------------
 -- 4. Create a stored procedure that uses the function from the previous
 -- example to give an interest to a person's account for one month.
 -- It should take the AccountId and the interest rate as parameters.
 --------------------------------------
+
+/*
+USE Bank
+GO
 
 CREATE PROC usp_UpdateInterest
 @accountId int,
@@ -114,11 +143,16 @@ EXEC usp_UpdateInterest @updateID, 0.03
 
 SELECT Balance AS [Balance After Update] FROM Accounts
 WHERE Id = @updateID
+*/
 
 --------------------------------------
 -- 5. Add two more stored procedures WithdrawMoney(AccountId, money)
 -- and DepositMoney(AccountId, money) that operate in transactions.
 --------------------------------------
+
+/*
+USE Bank
+GO
 
 CREATE PROC usp_WithdrawMoney
 @accountId int,
@@ -167,12 +201,17 @@ EXEC usp_DepositMoney @depositID, 300
 
 SELECT Balance AS [Balance After Update] FROM Accounts
 WHERE Id = @depositID
+*/
 
 --------------------------------------
 -- 6. Create another table – Logs(LogID, AccountID, OldSum, NewSum).
 -- Add a trigger to the Accounts table that enters a new entry into the
 -- Logs table every time the sum on an account changes.
 --------------------------------------
+
+/*
+USE Bank
+GO
 
 CREATE TABLE Logs(
 	LogID int NOT NULL IDENTITY PRIMARY KEY,
@@ -197,6 +236,7 @@ GO
 UPDATE Accounts
 SET Balance = Balance + 100
 WHERE Id = 3
+*/
 
 --------------------------------------
 -- 7. Define a function in the database TelerikAcademy that
@@ -205,6 +245,7 @@ WHERE Id = 3
 -- Example: 'oistmiahf' will return 'Sofia', 'Smith', … but not 'Rob' and 'Guy'.
 --------------------------------------
 
+/*
 USE TelerikAcademy
 GO
 
@@ -281,7 +322,7 @@ END
 GO
 
 SELECT * FROM ufn_CheckIfNameConsistsOfLetters('oistmiahf')
-
+*/
 
 --------------------------------------
 -- 8. Define a function in the database TelerikAcademy that
@@ -290,6 +331,7 @@ SELECT * FROM ufn_CheckIfNameConsistsOfLetters('oistmiahf')
 -- Example: 'oistmiahf' will return 'Sofia', 'Smith', … but not 'Rob' and 'Guy'.
 --------------------------------------
 
+/*
 USE TelerikAcademy
 GO
 
@@ -325,4 +367,104 @@ WHILE @@FETCH_STATUS = 0
 
 CLOSE employeeCursor
 DEALLOCATE employeeCursor
+*/
+
+--------------------------------------
+-- 9. *Write a T-SQL script that shows for each town a list of all employees that live in it. Sample output:
+-- Sofia -> Svetlin Nakov, Martin Kulov, George Denchev
+-- Ottawa -> Jose Saraiva
+-- ...
+--------------------------------------
+
+/*
+USE TelerikAcademy
+GO
+
+CREATE TABLE UsersTowns (ID INT IDENTITY, FullName NVARCHAR(50), TownName NVARCHAR(50))
+INSERT INTO UsersTowns
+SELECT e.FirstName + ' ' + e.LastName, t.Name
+                FROM Employees e
+                        INNER JOIN Addresses a
+                                ON a.AddressID = e.AddressID
+                        INNER JOIN Towns t
+                                ON t.TownID = a.TownID
+                GROUP BY t.Name, e.FirstName, e.LastName
+
+DECLARE @name NVARCHAR(50)
+DECLARE @town NVARCHAR(50)
+ 
+DECLARE employeeCursor CURSOR READ_ONLY FOR
+        SELECT DISTINCT ut.TownName
+                FROM UsersTowns ut     
+ 
+OPEN employeeCursor
+FETCH NEXT FROM empCursor1
+	INTO @town
+ 
+	WHILE @@FETCH_STATUS = 0
+		BEGIN
+			DECLARE @empName nvarchar(MAX);
+			SET @empName = N'';
+			SELECT @empName += ut.FullName + N', '
+			FROM UsersTowns ut
+			WHERE ut.TownName = @town
+			PRINT @town + ' -> ' + LEFT(@empName,LEN(@empName)-1);
+
+			FETCH NEXT FROM empCursor1 INTO @town
+		END
+CLOSE employeeCursor
+DEALLOCATE employeeCursor
+*/
+
+--------------------------------------
+-- 10. Define a .NET aggregate function StrConcat that takes as input a sequence of strings and return a single string that consists of the input strings separated by ','.
+-- For example the following SQL statement should return a single string:
+-- SELECT StrConcat(FirstName + ' ' + LastName)
+-- FROM Employees
+--------------------------------------
+
+/*
+USE TelerikAcademy
+GO
+
+IF NOT EXISTS (
+    SELECT value
+    FROM sys.configurations
+    WHERE name = 'clr enabled' AND value = 1
+)
+BEGIN
+    EXEC sp_configure @configname = clr_enabled, @configvalue = 1
+    RECONFIGURE
+END
+GO
+
+IF (OBJECT_ID('dbo.concat') IS NOT NULL) 
+    DROP Aggregate concat; 
+GO 
+
+IF EXISTS (SELECT * FROM sys.assemblies WHERE name = 'concat_assembly') 
+    DROP assembly concat_assembly; 
+GO      
+
+CREATE Assembly concat_assembly 
+   AUTHORIZATION dbo 
+   FROM 'D:\Programming\Telerik-Academy\Databases Homeworks\Transact SQL\SqlStringConcatenation.dll' --- CHANGE THE LOCATION (SAME AS THIS .sql FILE)
+   WITH PERMISSION_SET = SAFE; 
+GO 
+
+CREATE AGGREGATE dbo.concat ( 
+    @Value NVARCHAR(MAX),
+    @Delimiter NVARCHAR(4000) 
+) 
+    RETURNS NVARCHAR(MAX) 
+    EXTERNAL Name concat_assembly.concat; 
+GO 
+
+SELECT dbo.concat(FirstName + ' ' + LastName, ', ')
+FROM Employees
+GO
+
+DROP Aggregate concat; 
+DROP assembly concat_assembly; 
+GO
 */
