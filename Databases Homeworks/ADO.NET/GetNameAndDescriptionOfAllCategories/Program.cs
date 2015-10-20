@@ -20,9 +20,9 @@
                 {
                     while (reader.Read())
                     {
-                        int categoryId = (int) reader["CategoryID"];
-                        string categoryName = (string) reader["CategoryName"];
-                        string description = (string) reader["Description"];
+                        int categoryId = (int)reader["CategoryID"];
+                        string categoryName = (string)reader["CategoryName"];
+                        string description = (string)reader["Description"];
                         Console.WriteLine("{0}. {1} - {2}", categoryId, categoryName, description);
                     }
                 }

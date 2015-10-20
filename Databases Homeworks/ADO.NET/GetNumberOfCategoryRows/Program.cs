@@ -15,7 +15,7 @@
             {
                 SqlCommand cmdCount = new SqlCommand(
                     "SELECT COUNT(*) FROM Categories", dbCon);
-                int categoryCount = (int) cmdCount.ExecuteScalar();
+                int categoryCount = (int)cmdCount.ExecuteScalar();
                 Console.WriteLine("Categories count: {0} ", categoryCount);
             }
         }

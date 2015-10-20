@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AddNewProduct
+﻿namespace AddNewProduct
 {
-    class Program
+    using System;
+    using System.Data.SqlClient;
+
+    public class Program
     {
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
             SqlConnection dbCon = new SqlConnection("Server=.\\SQLEXPRESS; " +
                                                     "Database=Northwind; Integrated Security=true");
